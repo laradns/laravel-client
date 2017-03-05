@@ -1,0 +1,24 @@
+{
+    "name": "laradns/laravel-client",
+    "description": "The Laravel client package for LaraDNS - automating the DNS update process.",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "illuminate/support": "5.4.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew Lees",
+            "email": "andrew@laradns.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+      "psr-4": {
+        "LaraDns\\": "src/"
+      }
+    }
+}
