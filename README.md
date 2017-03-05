@@ -10,7 +10,7 @@ As simple as it should be:
 composer require laradns/laravel-client
 ```
 #### Configure it
-Add your unique ID obtained after adding your site via the LaraDNS interface:
+Add your unique ID obtained after adding your site via the [LaraDNS](https://laradns.com) interface:
 
 ```php
 // .env
@@ -24,11 +24,10 @@ Schedule the command to execute as often, or as little, as you wish. As it's a c
 
 protected function schedule(Schedule $schedule)
 {
-    $schedule->command('dns:sync')->everyTenMinutes();
+    $schedule->command('dns:sync')->everyFiveMinutes();
 }
 ```
 ### Events
-
 You may wish to perform your own actions on an IP update. To facilitate this, the client fires an `LaraDns\Events\SiteUpdated` event each time an IP address changes, with the address as the payload.
 
 Register a listener:
