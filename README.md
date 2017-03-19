@@ -9,6 +9,7 @@ As simple as it should be:
 ```
 composer require laradns/laravel-client
 ```
+
 ### Configure it
 Add your unique ID obtained after adding your site via the [LaraDNS](https://laradns.com) interface:
 
@@ -16,6 +17,16 @@ Add your unique ID obtained after adding your site via the [LaraDNS](https://lar
 // .env
 
 LARADNS_ID=AJBUEo3UcmZ0JDPgSCGxwIRrj5TyAU
+```
+Add the LaraDNS service provider:
+
+```php
+// config/app.php
+
+'providers' => [
+    // Other service providers...    
+    LaraDns\Providers\LaraDnsServiceProvider::class,
+]
 ```
 ### Run it
 Schedule the command to execute as often, or as little, as you wish. As it's a console command, you can even include it in your deploy script to ensure your DNS is always up-to-date.
